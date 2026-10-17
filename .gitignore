@@ -1,0 +1,25 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+.DS_Store
+.swiftpm/
+.build/
+
+# Local tools and generated analysis
+.agents/skills/
+graphify-out/
+__pycache__/
+*.pyc
+
+# Local configuration and signing credentials
+.env
+.env.*
+!.env.example
+.aws/
+*.p8
+*.p12
+*.mobileprovision

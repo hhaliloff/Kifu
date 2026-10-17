@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17FC3EC746DC1DD20FA1F0D5 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAE92FE33CBBB2B736D8A2 /* DesignSystem.swift */; };
+		33EDFD60EFFF694594C371E7 /* KifuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC90F0505C4C8F95B771C3 /* KifuApp.swift */; };
+		354B44867199438D2BE87D21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949680666AEBDD6C1528F5C /* ContentView.swift */; };
+		6E787AF74A5D868D24BA6FD3 /* GobanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C0B50B3CBFABBF92F50A2 /* GobanView.swift */; };
+		781039CB56F3B3FCDFBFE4E5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 89511B72105AA990A4AA1EF4 /* PrivacyInfo.xcprivacy */; };
+		7EA31CC0C00CE2057A0CCA50 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB0F9DB5EEF3DCAD9346F6 /* Localization.swift */; };
+		9557E07E31BF58B334FA28DA /* GoCore in Frameworks */ = {isa = PBXBuildFile; productRef = DAA5D3DB84536FF93021505F /* GoCore */; };
+		A12C30A05E8D6AF25F2C21BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F96625882CFB9B01E9C239 /* Assets.xcassets */; };
+		DA327955B2943A3D9888B742 /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3AD09E322CF52E8207DAF /* AppModels.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C9C0B50B3CBFABBF92F50A2 /* GobanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GobanView.swift; sourceTree = "<group>"; };
+		29EB0F9DB5EEF3DCAD9346F6 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		51F96625882CFB9B01E9C239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64613024962E9E39EBD6027C /* Kifu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kifu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72FCC4E4C7A31EE1006D52D1 /* GoCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoCore; path = Packages/GoCore; sourceTree = SOURCE_ROOT; };
+		7AFC90F0505C4C8F95B771C3 /* KifuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KifuApp.swift; sourceTree = "<group>"; };
+		89511B72105AA990A4AA1EF4 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C949680666AEBDD6C1528F5C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9A3AD09E322CF52E8207DAF /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
+		F7DAE92FE33CBBB2B736D8A2 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C72199F044DF51708BDCF214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9557E07E31BF58B334FA28DA /* GoCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10B44D014BC3BB99D6AFD133 /* Kifu */ = {
+			isa = PBXGroup;
+			children = (
+				99648B34A585DF7A078FEA41 /* Resources */,
+				D9A3AD09E322CF52E8207DAF /* AppModels.swift */,
+				C949680666AEBDD6C1528F5C /* ContentView.swift */,
+				F7DAE92FE33CBBB2B736D8A2 /* DesignSystem.swift */,
+				0C9C0B50B3CBFABBF92F50A2 /* GobanView.swift */,
+				7AFC90F0505C4C8F95B771C3 /* KifuApp.swift */,
+				29EB0F9DB5EEF3DCAD9346F6 /* Localization.swift */,
+				89511B72105AA990A4AA1EF4 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Kifu;
+			sourceTree = "<group>";
+		};
+		667EE9F879B4804039C19937 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6F4E4F14D3EE828A3D06140B = {
+			isa = PBXGroup;
+			children = (
+				AD2A7764837C8867F661B394 /* Packages */,
+				667EE9F879B4804039C19937 /* Resources */,
+				A82DB7DE9008509893D013E7 /* Sources */,
+				C88854D1DED9A9C01CD3FFD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99648B34A585DF7A078FEA41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				51F96625882CFB9B01E9C239 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A82DB7DE9008509893D013E7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				10B44D014BC3BB99D6AFD133 /* Kifu */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AD2A7764837C8867F661B394 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				72FCC4E4C7A31EE1006D52D1 /* GoCore */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		C88854D1DED9A9C01CD3FFD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64613024962E9E39EBD6027C /* Kifu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B846059484E088BB4FC1229F /* Kifu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9399F1F769A0FEFE82F5E565 /* Build configuration list for PBXNativeTarget "Kifu" */;
+			buildPhases = (
+				5F1EE639128CCE9639052D40 /* Sources */,
+				AD16F6B22A663816F7272948 /* Resources */,
+				C72199F044DF51708BDCF214 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kifu;
+			packageProductDependencies = (
+				DAA5D3DB84536FF93021505F /* GoCore */,
+			);
+			productName = Kifu;
+			productReference = 64613024962E9E39EBD6027C /* Kifu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC1C93915A19D74E5E426174 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = 50C3DD95AC6810F1809B0BA0 /* Build configuration list for PBXProject "Kifu" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 6F4E4F14D3EE828A3D06140B;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5D2782417F7FCD8EEE8238B3 /* XCLocalSwiftPackageReference "Packages/GoCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C88854D1DED9A9C01CD3FFD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B846059484E088BB4FC1229F /* Kifu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD16F6B22A663816F7272948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12C30A05E8D6AF25F2C21BD /* Assets.xcassets in Resources */,
+				781039CB56F3B3FCDFBFE4E5 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F1EE639128CCE9639052D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA327955B2943A3D9888B742 /* AppModels.swift in Sources */,
+				354B44867199438D2BE87D21 /* ContentView.swift in Sources */,
+				17FC3EC746DC1DD20FA1F0D5 /* DesignSystem.swift in Sources */,
+				6E787AF74A5D868D24BA6FD3 /* GobanView.swift in Sources */,
+				33EDFD60EFFF694594C371E7 /* KifuApp.swift in Sources */,
+				7EA31CC0C00CE2057A0CCA50 /* Localization.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		524F58DF7BE86BCB2243F458 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8352DFA25F06DC80AF558D71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = WY8GA8833U;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Kifu;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad" = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ITSAppUsesNonExemptEncryption = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kifu.go;
+				PRODUCT_NAME = Kifu;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8A5D885A6130BE9F94264526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A1EA9A76DC586201D674C342 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = WY8GA8833U;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Kifu;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad" = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ITSAppUsesNonExemptEncryption = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kifu.go;
+				PRODUCT_NAME = Kifu;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50C3DD95AC6810F1809B0BA0 /* Build configuration list for PBXProject "Kifu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524F58DF7BE86BCB2243F458 /* Debug */,
+				8A5D885A6130BE9F94264526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9399F1F769A0FEFE82F5E565 /* Build configuration list for PBXNativeTarget "Kifu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1EA9A76DC586201D674C342 /* Debug */,
+				8352DFA25F06DC80AF558D71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		5D2782417F7FCD8EEE8238B3 /* XCLocalSwiftPackageReference "Packages/GoCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/GoCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAA5D3DB84536FF93021505F /* GoCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GoCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EC1C93915A19D74E5E426174 /* Project object */;
+}

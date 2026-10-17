@@ -1,0 +1,23 @@
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 5
+
+[agents.ios_developer]
+description = "Implements Swift and SwiftUI features for the iOS application."
+config_file = "./agents/ios-developer.toml"
+
+[agents.ui_designer]
+description = "Designs SwiftUI interfaces and improves iOS UX."
+config_file = "./agents/ui-designer.toml"
+
+[agents.researcher]
+description = "Researches Apple documentation, APIs, frameworks and technical questions."
+config_file = "./agents/researcher.toml"
+
+[agents.tester]
+description = "Builds and tests the iOS application and investigates failures."
+config_file = "./agents/tester.toml"
+
+[agents.reviewer]
+description = "Reviews finished iOS code for bugs, architecture and security problems."
+config_file = "./agents/reviewer.toml"

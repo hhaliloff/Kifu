@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru"><meta charset="utf-8"><title>Проверка разметки задач го</title>
+<style>
+body{font:16px system-ui;background:#f3f0e8;color:#24231e;margin:24px auto;max-width:1100px;padding:0 16px}
+header,.layout,.controls{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.card{background:white;border:1px solid #d8d0bf;border-radius:14px;padding:18px;margin:12px 0}
+#board{width:min(95vw,660px);height:auto;touch-action:none}
+button,select,input{font:inherit;padding:8px 10px}button{cursor:pointer}
+#groupList button{display:block;width:100%;text-align:left;margin:5px 0}
+.selected{background:#cfe7d6}small{color:#5d5a52}
+</style>
+<header><h1>Проверка разметки</h1><p>Рабочий инструмент вне приложения. Загрузите <code>position_annotations.json</code>, отметьте цель и скачайте решения.</p></header>
+<div class="card controls"><input id="file" type="file" accept=".json"><label>Показать <select id="filter"><option value="ld">Жизнь / убийство</option><option value="all">Все</option><option value="pending">Не проверенные</option></select></label><button id="prev">←</button><button id="next">→</button><span id="progress"></span></div>
+<div class="layout"><div class="card"><svg id="board" viewBox="0 0 440 440" role="img" aria-label="Доска го"></svg></div><div class="card" style="flex:1;min-width:260px"><h2 id="title"></h2><p id="info"></p><label>Тип задачи <select id="type"><option value="live">Жить</option><option value="kill">Убить</option><option value="make_ko">Создать ко</option><option value="capturing_race">Сэмэай</option><option value="oiotoshi">Ойотоси</option><option value="connect">Соединить</option><option value="various">Другое</option><option value="unclassified">Не определено</option></select></label><h3>Целевая группа</h3><div id="groupList"></div><label>Комментарий<br><textarea id="note" rows="3" style="width:95%"></textarea></label><p><button id="save">Сохранить разметку</button> <button id="export">Скачать решения разметки</button></p><small>Разметка сохраняется в этом браузере. Скачайте JSON для передачи в дальнейшую обработку. Ответы задач здесь не создаются.</small></div></div>
+<script>
+let data=[], ids=[], position=0, decisions={};
+const $=id=>document.getElementById(id);
+const key='kifu-tsumego-review-v1';
+try{decisions=JSON.parse(localStorage.getItem(key)||'{}')}catch{}
+function refreshFilter(){let f=$('filter').value;ids=data.map((x,i)=>i).filter(i=>f==='all'||f==='ld'&&['live','kill'].includes(data[i].task_type)||f==='pending'&&!decisions[data[i].id]);position=0;render()}
+function render(){if(!ids.length){$('title').textContent='Загрузите JSON';$('board').innerHTML='';return}const x=data[ids[position]],d=decisions[x.id]||{};$('progress').textContent=`${position+1} / ${ids.length}`;$('title').textContent=`${x.id} — ${x.source_label}`;$('info').textContent=`Ход: ${x.to_play==='B'?'чёрные':'белые'} · групп: ${x.groups.length} · ${d.target_group_stones?'цель сохранена':'цель не подтверждена'}`;$('type').value=d.task_type||x.task_type;$('note').value=d.note||'';draw(x,d);$('groupList').innerHTML='';x.groups.forEach((g,i)=>{let b=document.createElement('button');b.textContent=`${i+1}. ${g.color==='B'?'Чёрные':'Белые'}: ${g.stones.join(' ')} (${g.liberty_count} свобод)`;if(JSON.stringify(d.target_group_stones)===JSON.stringify(g.stones))b.className='selected';b.onclick=()=>{d.target_group_stones=g.stones;decisions[x.id]=d;localStorage.setItem(key,JSON.stringify(decisions));render()};$('groupList').append(b)})}
+function draw(x,d){let svg=$('board'),s='<rect x="0" y="0" width="440" height="440" fill="#ddbf83"/>';for(let i=0;i<19;i++){let p=22+i*22;s+=`<path d="M22 ${p}H418 M${p} 22V418" stroke="#655d4d" stroke-width="1"/>`}for(let color of ['black','white'])for(let p of x.setup[color]){let cx=22+(p.charCodeAt(0)-97)*22,cy=22+(p.charCodeAt(1)-97)*22,selected=(d.target_group_stones||[]).includes(p);s+=`<circle cx="${cx}" cy="${cy}" r="10" fill="${color==='black'?'#161616':'#f8f6ef'}" stroke="${selected?'#e33422':'#514b40'}" stroke-width="${selected?3:1}"/>`}svg.innerHTML=s}
+$('file').onchange=async e=>{data=JSON.parse(await e.target.files[0].text());refreshFilter()};$('filter').onchange=refreshFilter;$('prev').onclick=()=>{position=Math.max(0,position-1);render()};$('next').onclick=()=>{position=Math.min(ids.length-1,position+1);render()};$('save').onclick=()=>{let x=data[ids[position]],d=decisions[x.id]||{};d.task_type=$('type').value;d.note=$('note').value;d.reviewed_at=new Date().toISOString();decisions[x.id]=d;localStorage.setItem(key,JSON.stringify(decisions));render()};$('export').onclick=()=>{let blob=new Blob([JSON.stringify(decisions,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='review_decisions.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};render();
+</script></html>

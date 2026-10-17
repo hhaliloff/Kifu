@@ -1,0 +1,15 @@
+{
+  "gokyoshumyo-001": {
+    "target_stones": [
+      "bb",
+      "bc",
+      "bd",
+      "cb",
+      "db"
+    ],
+    "goal": "live",
+    "basis": "Section 1: Living; one connected white group; white to play.",
+    "board_transformation": "none",
+    "ko_assumption": "White must live without winning a ko; black allowed ko. Requires source-specific review before final publication."
+  }
+}
